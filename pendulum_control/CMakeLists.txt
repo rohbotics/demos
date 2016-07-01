@@ -31,6 +31,8 @@ macro(targets)
 
   add_executable(pendulum_demo${target_suffix}
     src/pendulum_demo.cpp)
+  # TODO(dhood): allow dependencies to be listed in arbitrary order without affecting the selected
+  # typesupport. See https://github.com/ros2/ros2/issues/253
   ament_target_dependencies(pendulum_demo${target_suffix}
     "rclcpp${target_suffix}"
     "pendulum_msgs"
@@ -39,6 +41,8 @@ macro(targets)
 
   add_executable(pendulum_logger${target_suffix}
     src/pendulum_logger.cpp)
+  # TODO(dhood): allow dependencies to be listed in arbitrary order without affecting the selected
+  # typesupport. See https://github.com/ros2/ros2/issues/253
   ament_target_dependencies(pendulum_logger${target_suffix}
     "rclcpp${target_suffix}"
     "pendulum_msgs"
@@ -46,6 +50,8 @@ macro(targets)
 
   add_executable(pendulum_teleop${target_suffix}
     src/pendulum_teleop.cpp)
+  # TODO(dhood): allow dependencies to be listed in arbitrary order without affecting the selected
+  # typesupport. See https://github.com/ros2/ros2/issues/253
   ament_target_dependencies(pendulum_teleop${target_suffix}
     "rclcpp${target_suffix}"
     "pendulum_msgs"
